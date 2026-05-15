@@ -49,4 +49,3 @@ def delete_account(account_id):
         abort(404)
     del accounts[account_id]
     return '', 204
-
