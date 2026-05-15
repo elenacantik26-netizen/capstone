@@ -1,0 +1,58 @@
+NAME                          SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
+capstone-pipeline-run-gwgkq   True        Succeeded   52s         32s
+Name:         capstone-pipeline-run-gwgkq
+Namespace:    default
+Labels:       tekton.dev/pipeline=capstone-pipeline
+Annotations:  <none>
+API Version:  tekton.dev/v1
+Kind:         PipelineRun
+Metadata:
+  Creation Timestamp:  2026-05-15T21:17:02Z
+  Generate Name:       capstone-pipeline-run-
+  Generation:          1
+  Resource Version:    1301
+  UID:                 6e14012e-da27-40be-b701-0c98d34bafef
+Spec:
+  Pipeline Ref:
+    Name:  capstone-pipeline
+  Task Run Template:
+    Service Account Name:  default
+  Timeouts:
+    Pipeline:  1h0m0s
+Status:
+  Child References:
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-gwgkq-build
+    Pipeline Task Name:  build
+  Completion Time:       2026-05-15T21:17:22Z
+  Conditions:
+    Last Transition Time:  2026-05-15T21:17:22Z
+    Message:               Tasks Completed: 1 (Failed: 0, Cancelled 0), Skipped: 0
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pipeline Spec:
+    Tasks:
+      Name:  build
+      Task Ref:
+        Kind:  Task
+        Name:  build-task
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-15T21:17:02Z
+Events:
+  Type    Reason     Age   From         Message
+  ----    ------     ----  ----         -------
+  Normal  Started    52s   PipelineRun  
+  Normal  Running    52s   PipelineRun  Tasks Completed: 0 (Failed: 0, Cancelled 0), Incomplete: 1, Skipped: 0
+  Normal  Succeeded  32s   PipelineRun  Tasks Completed: 1 (Failed: 0, Cancelled 0), Skipped: 0

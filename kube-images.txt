@@ -1,0 +1,2 @@
+IMAGE             ID             DISK USAGE   CONTENT SIZE   EXTRA
+capstone:latest   089978035f43        233MB         55.1MB   U    
