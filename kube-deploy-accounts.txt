@@ -1,11 +1,21 @@
-NAME                            READY   STATUS             RESTARTS   AGE
-pod/capstone-7fdc475f5d-fbj6p   0/1     ImagePullBackOff   0          3m34s
+NAME                                        READY   STATUS             RESTARTS   AGE
+pod/capstone-7fdc475f5d-fbj6p               0/1     ImagePullBackOff   0          31m
+pod/capstone-pipeline-run-gwgkq-build-pod   0/1     Completed          0          24m
 
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   3m52s
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   31m
 
 NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/capstone   0/1     1            0           3m34s
+deployment.apps/capstone   0/1     1            0           31m
 
 NAME                                  DESIRED   CURRENT   READY   AGE
-replicaset.apps/capstone-7fdc475f5d   1         1         0       3m34s
+replicaset.apps/capstone-7fdc475f5d   1         1         0       31m
+NAME                                    READY   STATUS             RESTARTS   AGE
+capstone-7fdc475f5d-fbj6p               0/1     ImagePullBackOff   0          31m
+capstone-pipeline-run-gwgkq-build-pod   0/1     Completed          0          24m
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+capstone   0/1     1            0           31m
+NAME                  DESIRED   CURRENT   READY   AGE
+capstone-7fdc475f5d   1         1         0       31m
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   31m

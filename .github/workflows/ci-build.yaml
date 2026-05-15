@@ -1,6 +1,10 @@
 name: CI Build
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -21,5 +25,5 @@ jobs:
       - name: Lint with Flake8
         run: flake8 service/ tests/
 
-      - name: Run unit tests with pytest
-        run: pytest tests/ -v
+      - name: Run unit tests with nosetests
+        run: nosetests
