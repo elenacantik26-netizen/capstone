@@ -3,4 +3,4 @@ __pycache__/
 .env
 venv/
 .coverage
-*.egg-info/
+*.egg-info/minikube-linux-amd64
