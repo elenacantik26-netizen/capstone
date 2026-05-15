@@ -1,1 +1,1 @@
-flaskflask-talismanflask-corsnosecoverageflake8pylint
+flaskflask-talismanflask-corspytestpytest-covflake8pylint
