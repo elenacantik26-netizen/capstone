@@ -14,4 +14,4 @@ Talisman(
 
 CORS(app)
 
-from service import routes  # noqa: E402
+from service import routes  # noqa: F401, E402

@@ -1,6 +1,7 @@
 import unittest
 from service import app
 
+
 class TestAccountRoutes(unittest.TestCase):
 
     def setUp(self):
@@ -47,6 +48,7 @@ class TestAccountRoutes(unittest.TestCase):
         )
         response = self.client.delete("/accounts/1")
         self.assertEqual(response.status_code, 204)
+
 
 if __name__ == "__main__":
     unittest.main()
