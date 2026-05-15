@@ -1,0 +1,351 @@
+build	Set up job	﻿2026-05-15T22:22:36.9448763Z Current runner version: '2.334.0'
+build	Set up job	2026-05-15T22:22:36.9475135Z ##[group]Runner Image Provisioner
+build	Set up job	2026-05-15T22:22:36.9476046Z Hosted Compute Agent
+build	Set up job	2026-05-15T22:22:36.9476620Z Version: 20260213.493
+build	Set up job	2026-05-15T22:22:36.9477254Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build	Set up job	2026-05-15T22:22:36.9478275Z Build Date: 2026-02-13T00:28:41Z
+build	Set up job	2026-05-15T22:22:36.9479095Z Worker ID: {24ea0aaa-0841-49ed-953e-0641721c30c1}
+build	Set up job	2026-05-15T22:22:36.9479812Z Azure Region: northcentralus
+build	Set up job	2026-05-15T22:22:36.9480378Z ##[endgroup]
+build	Set up job	2026-05-15T22:22:36.9481904Z ##[group]Operating System
+build	Set up job	2026-05-15T22:22:36.9482544Z Ubuntu
+build	Set up job	2026-05-15T22:22:36.9483023Z 24.04.4
+build	Set up job	2026-05-15T22:22:36.9483598Z LTS
+build	Set up job	2026-05-15T22:22:36.9484050Z ##[endgroup]
+build	Set up job	2026-05-15T22:22:36.9484503Z ##[group]Runner Image
+build	Set up job	2026-05-15T22:22:36.9485111Z Image: ubuntu-24.04
+build	Set up job	2026-05-15T22:22:36.9485622Z Version: 20260513.135.3
+build	Set up job	2026-05-15T22:22:36.9486652Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-05-15T22:22:36.9488688Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+build	Set up job	2026-05-15T22:22:36.9489574Z ##[endgroup]
+build	Set up job	2026-05-15T22:22:36.9490699Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-05-15T22:22:36.9492607Z Contents: read
+build	Set up job	2026-05-15T22:22:36.9493298Z Metadata: read
+build	Set up job	2026-05-15T22:22:36.9493847Z Packages: read
+build	Set up job	2026-05-15T22:22:36.9494389Z ##[endgroup]
+build	Set up job	2026-05-15T22:22:36.9496544Z Secret source: Actions
+build	Set up job	2026-05-15T22:22:36.9497276Z Prepare workflow directory
+build	Set up job	2026-05-15T22:22:36.9931967Z Prepare all required actions
+build	Set up job	2026-05-15T22:22:36.9987867Z Getting action download info
+build	Set up job	2026-05-15T22:22:37.3447403Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+build	Set up job	2026-05-15T22:22:37.4744912Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+build	Set up job	2026-05-15T22:22:37.7846672Z Complete job name: build
+build	Checkout code	﻿2026-05-15T22:22:37.8608606Z ##[group]Run actions/checkout@v3
+build	Checkout code	2026-05-15T22:22:37.8609593Z with:
+build	Checkout code	2026-05-15T22:22:37.8610203Z   repository: elenacantik26-netizen/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:37.8611100Z   token: ***
+build	Checkout code	2026-05-15T22:22:37.8611521Z   ssh-strict: true
+build	Checkout code	2026-05-15T22:22:37.8611973Z   persist-credentials: true
+build	Checkout code	2026-05-15T22:22:37.8612459Z   clean: true
+build	Checkout code	2026-05-15T22:22:37.8612896Z   sparse-checkout-cone-mode: true
+build	Checkout code	2026-05-15T22:22:37.8613411Z   fetch-depth: 1
+build	Checkout code	2026-05-15T22:22:37.8613833Z   fetch-tags: false
+build	Checkout code	2026-05-15T22:22:37.8614260Z   lfs: false
+build	Checkout code	2026-05-15T22:22:37.8614679Z   submodules: false
+build	Checkout code	2026-05-15T22:22:37.8615138Z   set-safe-directory: true
+build	Checkout code	2026-05-15T22:22:37.8615931Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:37.9566132Z Syncing repository: elenacantik26-netizen/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:37.9569676Z ##[group]Getting Git version info
+build	Checkout code	2026-05-15T22:22:37.9571396Z Working directory is '/home/runner/work/devops-capstone-project/devops-capstone-project'
+build	Checkout code	2026-05-15T22:22:37.9573846Z [command]/usr/bin/git version
+build	Checkout code	2026-05-15T22:22:37.9608517Z git version 2.54.0
+build	Checkout code	2026-05-15T22:22:37.9638959Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:37.9655831Z Temporarily overriding HOME='/home/runner/work/_temp/9236f092-ba5d-453e-8bb8-b48bc075320b' before making global git config changes
+build	Checkout code	2026-05-15T22:22:37.9659015Z Adding repository directory to the temporary git global config as a safe directory
+build	Checkout code	2026-05-15T22:22:37.9661806Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-capstone-project/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:37.9711424Z Deleting the contents of '/home/runner/work/devops-capstone-project/devops-capstone-project'
+build	Checkout code	2026-05-15T22:22:37.9715115Z ##[group]Initializing the repository
+build	Checkout code	2026-05-15T22:22:37.9719140Z [command]/usr/bin/git init /home/runner/work/devops-capstone-project/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:37.9821170Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Checkout code	2026-05-15T22:22:37.9823184Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Checkout code	2026-05-15T22:22:37.9824986Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Checkout code	2026-05-15T22:22:37.9826708Z hint: call:
+build	Checkout code	2026-05-15T22:22:37.9827455Z hint:
+build	Checkout code	2026-05-15T22:22:37.9828725Z hint: 	git config --global init.defaultBranch <name>
+build	Checkout code	2026-05-15T22:22:37.9829933Z hint:
+build	Checkout code	2026-05-15T22:22:37.9831086Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Checkout code	2026-05-15T22:22:37.9832939Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Checkout code	2026-05-15T22:22:37.9834430Z hint:
+build	Checkout code	2026-05-15T22:22:37.9835230Z hint: 	git branch -m <name>
+build	Checkout code	2026-05-15T22:22:37.9836148Z hint:
+build	Checkout code	2026-05-15T22:22:37.9837403Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Checkout code	2026-05-15T22:22:37.9840228Z Initialized empty Git repository in /home/runner/work/devops-capstone-project/devops-capstone-project/.git/
+build	Checkout code	2026-05-15T22:22:37.9844673Z [command]/usr/bin/git remote add origin https://github.com/elenacantik26-netizen/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:37.9882446Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:37.9883987Z ##[group]Disabling automatic garbage collection
+build	Checkout code	2026-05-15T22:22:37.9885269Z [command]/usr/bin/git config --local gc.auto 0
+build	Checkout code	2026-05-15T22:22:37.9915346Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:37.9916803Z ##[group]Setting up auth
+build	Checkout code	2026-05-15T22:22:37.9920817Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Checkout code	2026-05-15T22:22:37.9953846Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Checkout code	2026-05-15T22:22:38.0301916Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Checkout code	2026-05-15T22:22:38.0332784Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Checkout code	2026-05-15T22:22:38.0553866Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Checkout code	2026-05-15T22:22:38.0589436Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:38.0590939Z ##[group]Fetching the repository
+build	Checkout code	2026-05-15T22:22:38.0599822Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +bb69235a3dec2c28597325f781ff1b2756829aab:refs/remotes/origin/main
+build	Checkout code	2026-05-15T22:22:38.3235185Z remote: Enumerating objects: 28, done.        
+build	Checkout code	2026-05-15T22:22:38.3236528Z remote: Counting objects:   3% (1/28)        
+build	Checkout code	2026-05-15T22:22:38.3237301Z remote: Counting objects:   7% (2/28)        
+build	Checkout code	2026-05-15T22:22:38.3238522Z remote: Counting objects:  10% (3/28)        
+build	Checkout code	2026-05-15T22:22:38.3239273Z remote: Counting objects:  14% (4/28)        
+build	Checkout code	2026-05-15T22:22:38.3239971Z remote: Counting objects:  17% (5/28)        
+build	Checkout code	2026-05-15T22:22:38.3240691Z remote: Counting objects:  21% (6/28)        
+build	Checkout code	2026-05-15T22:22:38.3241382Z remote: Counting objects:  25% (7/28)        
+build	Checkout code	2026-05-15T22:22:38.3242144Z remote: Counting objects:  28% (8/28)        
+build	Checkout code	2026-05-15T22:22:38.3242843Z remote: Counting objects:  32% (9/28)        
+build	Checkout code	2026-05-15T22:22:38.3243606Z remote: Counting objects:  35% (10/28)        
+build	Checkout code	2026-05-15T22:22:38.3244313Z remote: Counting objects:  39% (11/28)        
+build	Checkout code	2026-05-15T22:22:38.3245013Z remote: Counting objects:  42% (12/28)        
+build	Checkout code	2026-05-15T22:22:38.3245703Z remote: Counting objects:  46% (13/28)        
+build	Checkout code	2026-05-15T22:22:38.3246410Z remote: Counting objects:  50% (14/28)        
+build	Checkout code	2026-05-15T22:22:38.3247109Z remote: Counting objects:  53% (15/28)        
+build	Checkout code	2026-05-15T22:22:38.3247873Z remote: Counting objects:  57% (16/28)        
+build	Checkout code	2026-05-15T22:22:38.3248506Z remote: Counting objects:  60% (17/28)        
+build	Checkout code	2026-05-15T22:22:38.3249124Z remote: Counting objects:  64% (18/28)        
+build	Checkout code	2026-05-15T22:22:38.3249735Z remote: Counting objects:  67% (19/28)        
+build	Checkout code	2026-05-15T22:22:38.3250330Z remote: Counting objects:  71% (20/28)        
+build	Checkout code	2026-05-15T22:22:38.3250944Z remote: Counting objects:  75% (21/28)        
+build	Checkout code	2026-05-15T22:22:38.3251839Z remote: Counting objects:  78% (22/28)        
+build	Checkout code	2026-05-15T22:22:38.3252429Z remote: Counting objects:  82% (23/28)        
+build	Checkout code	2026-05-15T22:22:38.3253035Z remote: Counting objects:  85% (24/28)        
+build	Checkout code	2026-05-15T22:22:38.3253635Z remote: Counting objects:  89% (25/28)        
+build	Checkout code	2026-05-15T22:22:38.3254229Z remote: Counting objects:  92% (26/28)        
+build	Checkout code	2026-05-15T22:22:38.3254809Z remote: Counting objects:  96% (27/28)        
+build	Checkout code	2026-05-15T22:22:38.3255398Z remote: Counting objects: 100% (28/28)        
+build	Checkout code	2026-05-15T22:22:38.3256015Z remote: Counting objects: 100% (28/28), done.        
+build	Checkout code	2026-05-15T22:22:38.3256676Z remote: Compressing objects:   5% (1/20)        
+build	Checkout code	2026-05-15T22:22:38.3257313Z remote: Compressing objects:  10% (2/20)        
+build	Checkout code	2026-05-15T22:22:38.3258095Z remote: Compressing objects:  15% (3/20)        
+build	Checkout code	2026-05-15T22:22:38.3258729Z remote: Compressing objects:  20% (4/20)        
+build	Checkout code	2026-05-15T22:22:38.3259353Z remote: Compressing objects:  25% (5/20)        
+build	Checkout code	2026-05-15T22:22:38.3259989Z remote: Compressing objects:  30% (6/20)        
+build	Checkout code	2026-05-15T22:22:38.3322148Z remote: Compressing objects:  35% (7/20)        
+build	Checkout code	2026-05-15T22:22:38.3323014Z remote: Compressing objects:  40% (8/20)        
+build	Checkout code	2026-05-15T22:22:38.3323621Z remote: Compressing objects:  45% (9/20)        
+build	Checkout code	2026-05-15T22:22:38.3324193Z remote: Compressing objects:  50% (10/20)        
+build	Checkout code	2026-05-15T22:22:38.3324974Z remote: Compressing objects:  55% (11/20)        
+build	Checkout code	2026-05-15T22:22:38.3325588Z remote: Compressing objects:  60% (12/20)        
+build	Checkout code	2026-05-15T22:22:38.3326192Z remote: Compressing objects:  65% (13/20)        
+build	Checkout code	2026-05-15T22:22:38.3326760Z remote: Compressing objects:  70% (14/20)        
+build	Checkout code	2026-05-15T22:22:38.3327334Z remote: Compressing objects:  75% (15/20)        
+build	Checkout code	2026-05-15T22:22:38.3328095Z remote: Compressing objects:  80% (16/20)        
+build	Checkout code	2026-05-15T22:22:38.3328683Z remote: Compressing objects:  85% (17/20)        
+build	Checkout code	2026-05-15T22:22:38.3329259Z remote: Compressing objects:  90% (18/20)        
+build	Checkout code	2026-05-15T22:22:38.3330104Z remote: Compressing objects:  95% (19/20)        
+build	Checkout code	2026-05-15T22:22:38.3330667Z remote: Compressing objects: 100% (20/20)        
+build	Checkout code	2026-05-15T22:22:38.3331271Z remote: Compressing objects: 100% (20/20), done.        
+build	Checkout code	2026-05-15T22:22:38.3355098Z remote: Total 28 (delta 4), reused 20 (delta 4), pack-reused 0 (from 0)        
+build	Checkout code	2026-05-15T22:22:38.3503098Z From https://github.com/elenacantik26-netizen/devops-capstone-project
+build	Checkout code	2026-05-15T22:22:38.3505057Z  * [new ref]         bb69235a3dec2c28597325f781ff1b2756829aab -> origin/main
+build	Checkout code	2026-05-15T22:22:38.3545192Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:38.3546619Z ##[group]Determining the checkout info
+build	Checkout code	2026-05-15T22:22:38.3549616Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:38.3550845Z ##[group]Checking out the ref
+build	Checkout code	2026-05-15T22:22:38.3554771Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	Checkout code	2026-05-15T22:22:38.3615842Z Switched to a new branch 'main'
+build	Checkout code	2026-05-15T22:22:38.3619043Z branch 'main' set up to track 'origin/main'.
+build	Checkout code	2026-05-15T22:22:38.3626418Z ##[endgroup]
+build	Checkout code	2026-05-15T22:22:38.3666362Z [command]/usr/bin/git log -1 --format='%H'
+build	Checkout code	2026-05-15T22:22:38.3688034Z 'bb69235a3dec2c28597325f781ff1b2756829aab'
+build	Set up Python	﻿2026-05-15T22:22:38.3977691Z ##[group]Run actions/setup-python@v4
+build	Set up Python	2026-05-15T22:22:38.3978762Z with:
+build	Set up Python	2026-05-15T22:22:38.3979259Z   python-version: 3.9
+build	Set up Python	2026-05-15T22:22:38.3979891Z   check-latest: false
+build	Set up Python	2026-05-15T22:22:38.3980736Z   token: ***
+build	Set up Python	2026-05-15T22:22:38.3981284Z   update-environment: true
+build	Set up Python	2026-05-15T22:22:38.3981983Z   allow-prereleases: false
+build	Set up Python	2026-05-15T22:22:38.3982631Z ##[endgroup]
+build	Set up Python	2026-05-15T22:22:38.5796328Z ##[group]Installed versions
+build	Set up Python	2026-05-15T22:22:38.5879453Z Version 3.9 was not found in the local cache
+build	Set up Python	2026-05-15T22:22:39.1309054Z Version 3.9 is available for downloading
+build	Set up Python	2026-05-15T22:22:39.1311990Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
+build	Set up Python	2026-05-15T22:22:39.7312493Z Extract downloaded archive
+build	Set up Python	2026-05-15T22:22:39.7436045Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/bf47e9c0-ea3e-419e-b880-2192c434760d -f /home/runner/work/_temp/2ee22477-eeba-43fb-9a01-4bcb6b773d8f
+build	Set up Python	2026-05-15T22:22:41.2012419Z Execute installation script
+build	Set up Python	2026-05-15T22:22:41.2111439Z Check if Python hostedtoolcache folder exist...
+build	Set up Python	2026-05-15T22:22:41.2112293Z Create Python 3.9.25 folder
+build	Set up Python	2026-05-15T22:22:41.2124796Z Copy Python binaries to hostedtoolcache folder
+build	Set up Python	2026-05-15T22:22:41.6711305Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+build	Set up Python	2026-05-15T22:22:41.6750425Z Upgrading pip...
+build	Set up Python	2026-05-15T22:22:43.8815201Z Looking in links: /tmp/tmphnt72fwl
+build	Set up Python	2026-05-15T22:22:43.8820227Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+build	Set up Python	2026-05-15T22:22:43.8825393Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+build	Set up Python	2026-05-15T22:22:45.1005424Z Collecting pip
+build	Set up Python	2026-05-15T22:22:45.1353746Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+build	Set up Python	2026-05-15T22:22:45.1813633Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 41.4 MB/s eta 0:00:00
+build	Set up Python	2026-05-15T22:22:45.1814355Z 
+build	Set up Python	2026-05-15T22:22:45.2492242Z Installing collected packages: pip
+build	Set up Python	2026-05-15T22:22:45.2493086Z Attempting uninstall: pip
+build	Set up Python	2026-05-15T22:22:45.2499516Z Found existing installation: pip 23.0.1
+build	Set up Python	2026-05-15T22:22:45.4309627Z Uninstalling pip-23.0.1:
+build	Set up Python	2026-05-15T22:22:45.4385479Z Successfully uninstalled pip-23.0.1
+build	Set up Python	2026-05-15T22:22:46.2796579Z Successfully installed pip-26.0.1
+build	Set up Python	2026-05-15T22:22:46.3361366Z Create complete file
+build	Set up Python	2026-05-15T22:22:46.3405778Z Successfully set up CPython (3.9.25)
+build	Set up Python	2026-05-15T22:22:46.3406800Z ##[endgroup]
+build	Install dependencies	﻿2026-05-15T22:22:46.3578546Z ##[group]Run pip install -r requirements.txt
+build	Install dependencies	2026-05-15T22:22:46.3578948Z [36;1mpip install -r requirements.txt[0m
+build	Install dependencies	2026-05-15T22:22:46.3619640Z shell: /usr/bin/bash -e {0}
+build	Install dependencies	2026-05-15T22:22:46.3619908Z env:
+build	Install dependencies	2026-05-15T22:22:46.3620161Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Install dependencies	2026-05-15T22:22:46.3620603Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	Install dependencies	2026-05-15T22:22:46.3621006Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Install dependencies	2026-05-15T22:22:46.3621381Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Install dependencies	2026-05-15T22:22:46.3621742Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Install dependencies	2026-05-15T22:22:46.3622127Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	Install dependencies	2026-05-15T22:22:46.3622422Z ##[endgroup]
+build	Install dependencies	2026-05-15T22:22:46.7364263Z Collecting flask (from -r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:46.7699918Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+build	Install dependencies	2026-05-15T22:22:46.7854439Z Collecting flask-talisman (from -r requirements.txt (line 2))
+build	Install dependencies	2026-05-15T22:22:46.7909594Z   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl.metadata (18 kB)
+build	Install dependencies	2026-05-15T22:22:46.8113098Z Collecting flask-cors (from -r requirements.txt (line 3))
+build	Install dependencies	2026-05-15T22:22:46.8152975Z   Downloading flask_cors-6.0.2-py3-none-any.whl.metadata (5.3 kB)
+build	Install dependencies	2026-05-15T22:22:46.8377206Z Collecting nose (from -r requirements.txt (line 4))
+build	Install dependencies	2026-05-15T22:22:46.8417255Z   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+build	Install dependencies	2026-05-15T22:22:46.8961219Z Collecting pytest (from -r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:46.9008545Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+build	Install dependencies	2026-05-15T22:22:46.9210820Z Collecting pytest-cov (from -r requirements.txt (line 6))
+build	Install dependencies	2026-05-15T22:22:46.9255508Z   Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+build	Install dependencies	2026-05-15T22:22:46.9527813Z Collecting flake8 (from -r requirements.txt (line 7))
+build	Install dependencies	2026-05-15T22:22:46.9571027Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+build	Install dependencies	2026-05-15T22:22:47.0052645Z Collecting pylint (from -r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:47.0224720Z   Downloading pylint-3.3.9-py3-none-any.whl.metadata (12 kB)
+build	Install dependencies	2026-05-15T22:22:47.0374230Z Collecting blinker>=1.9.0 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.0416949Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+build	Install dependencies	2026-05-15T22:22:47.0598085Z Collecting click>=8.1.3 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.0640650Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+build	Install dependencies	2026-05-15T22:22:47.0980380Z Collecting importlib-metadata>=3.6.0 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.1024911Z   Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+build	Install dependencies	2026-05-15T22:22:47.1188563Z Collecting itsdangerous>=2.2.0 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.1231487Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+build	Install dependencies	2026-05-15T22:22:47.1394552Z Collecting jinja2>=3.1.2 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.1435655Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+build	Install dependencies	2026-05-15T22:22:47.2070506Z Collecting markupsafe>=2.1.1 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.2116997Z   Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+build	Install dependencies	2026-05-15T22:22:47.2350406Z Collecting werkzeug>=3.1.0 (from flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:47.2394807Z   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+build	Install dependencies	2026-05-15T22:22:47.2661791Z Collecting exceptiongroup>=1 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.2704650Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+build	Install dependencies	2026-05-15T22:22:47.2842146Z Collecting iniconfig>=1 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.2884279Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+build	Install dependencies	2026-05-15T22:22:47.3080897Z Collecting packaging>=20 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.3122976Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+build	Install dependencies	2026-05-15T22:22:47.3258441Z Collecting pluggy<2,>=1.5 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.3304170Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+build	Install dependencies	2026-05-15T22:22:47.3537703Z Collecting pygments>=2.7.2 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.3582122Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+build	Install dependencies	2026-05-15T22:22:47.3874337Z Collecting tomli>=1 (from pytest->-r requirements.txt (line 5))
+build	Install dependencies	2026-05-15T22:22:47.3928299Z   Downloading tomli-2.4.1-py3-none-any.whl.metadata (10 kB)
+build	Install dependencies	2026-05-15T22:22:47.9002128Z Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov->-r requirements.txt (line 6))
+build	Install dependencies	2026-05-15T22:22:47.9048276Z   Downloading coverage-7.10.7-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.9 kB)
+build	Install dependencies	2026-05-15T22:22:47.9265554Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r requirements.txt (line 7))
+build	Install dependencies	2026-05-15T22:22:47.9309515Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+build	Install dependencies	2026-05-15T22:22:47.9464442Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8->-r requirements.txt (line 7))
+build	Install dependencies	2026-05-15T22:22:47.9522702Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+build	Install dependencies	2026-05-15T22:22:47.9681856Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8->-r requirements.txt (line 7))
+build	Install dependencies	2026-05-15T22:22:47.9729887Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+build	Install dependencies	2026-05-15T22:22:48.0098898Z Collecting astroid<=3.4.0.dev0,>=3.3.8 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.0144354Z   Downloading astroid-3.3.11-py3-none-any.whl.metadata (4.4 kB)
+build	Install dependencies	2026-05-15T22:22:48.0321854Z Collecting dill>=0.2 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.0362841Z   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+build	Install dependencies	2026-05-15T22:22:48.0770352Z Collecting isort!=5.13,<7,>=4.2.5 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.0815024Z   Downloading isort-6.1.0-py3-none-any.whl.metadata (12 kB)
+build	Install dependencies	2026-05-15T22:22:48.1054517Z Collecting platformdirs>=2.2 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.1096561Z   Downloading platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+build	Install dependencies	2026-05-15T22:22:48.1360886Z Collecting tomlkit>=0.10.1 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.1405933Z   Downloading tomlkit-0.15.0-py3-none-any.whl.metadata (2.8 kB)
+build	Install dependencies	2026-05-15T22:22:48.1605878Z Collecting typing-extensions>=3.10 (from pylint->-r requirements.txt (line 8))
+build	Install dependencies	2026-05-15T22:22:48.1756770Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+build	Install dependencies	2026-05-15T22:22:48.2225532Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1))
+build	Install dependencies	2026-05-15T22:22:48.2271566Z   Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+build	Install dependencies	2026-05-15T22:22:48.2457802Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+build	Install dependencies	2026-05-15T22:22:48.2539851Z Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+build	Install dependencies	2026-05-15T22:22:48.2614010Z Downloading flask_cors-6.0.2-py3-none-any.whl (13 kB)
+build	Install dependencies	2026-05-15T22:22:48.2682116Z Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+build	Install dependencies	2026-05-15T22:22:48.2772704Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+build	Install dependencies	2026-05-15T22:22:48.2864355Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+build	Install dependencies	2026-05-15T22:22:48.2948268Z Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+build	Install dependencies	2026-05-15T22:22:48.3021698Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+build	Install dependencies	2026-05-15T22:22:48.3091496Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+build	Install dependencies	2026-05-15T22:22:48.3157126Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+build	Install dependencies	2026-05-15T22:22:48.3225667Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+build	Install dependencies	2026-05-15T22:22:48.3321363Z Downloading pylint-3.3.9-py3-none-any.whl (523 kB)
+build	Install dependencies	2026-05-15T22:22:48.3426282Z Downloading astroid-3.3.11-py3-none-any.whl (275 kB)
+build	Install dependencies	2026-05-15T22:22:48.3518342Z Downloading isort-6.1.0-py3-none-any.whl (94 kB)
+build	Install dependencies	2026-05-15T22:22:48.3588523Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+build	Install dependencies	2026-05-15T22:22:48.3667219Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
+build	Install dependencies	2026-05-15T22:22:48.3733556Z Downloading coverage-7.10.7-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (246 kB)
+build	Install dependencies	2026-05-15T22:22:48.3813630Z Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+build	Install dependencies	2026-05-15T22:22:48.3878805Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+build	Install dependencies	2026-05-15T22:22:48.3942660Z Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+build	Install dependencies	2026-05-15T22:22:48.4005292Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+build	Install dependencies	2026-05-15T22:22:48.4065304Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+build	Install dependencies	2026-05-15T22:22:48.4146138Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+build	Install dependencies	2026-05-15T22:22:48.4214831Z Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+build	Install dependencies	2026-05-15T22:22:48.4280256Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+build	Install dependencies	2026-05-15T22:22:48.4351787Z Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
+build	Install dependencies	2026-05-15T22:22:48.4417551Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+build	Install dependencies	2026-05-15T22:22:48.4507180Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 169.8 MB/s  0:00:00
+build	Install dependencies	2026-05-15T22:22:48.4549909Z Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+build	Install dependencies	2026-05-15T22:22:48.4645244Z Downloading tomlkit-0.15.0-py3-none-any.whl (41 kB)
+build	Install dependencies	2026-05-15T22:22:48.4709429Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+build	Install dependencies	2026-05-15T22:22:48.4773299Z Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+build	Install dependencies	2026-05-15T22:22:48.4846468Z Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+build	Install dependencies	2026-05-15T22:22:48.5726157Z Installing collected packages: nose, flask-talisman, zipp, typing-extensions, tomlkit, tomli, pygments, pyflakes, pycodestyle, pluggy, platformdirs, packaging, mccabe, markupsafe, itsdangerous, iniconfig, dill, coverage, click, blinker, werkzeug, jinja2, importlib-metadata, flake8, exceptiongroup, astroid, pytest, isort, flask, pytest-cov, pylint, flask-cors
+build	Install dependencies	2026-05-15T22:22:51.0024155Z 
+build	Install dependencies	2026-05-15T22:22:51.0083511Z Successfully installed astroid-3.3.11 blinker-1.9.0 click-8.1.8 coverage-7.10.7 dill-0.4.1 exceptiongroup-1.3.1 flake8-7.3.0 flask-3.1.3 flask-cors-6.0.2 flask-talisman-1.1.0 importlib-metadata-8.7.1 iniconfig-2.1.0 isort-6.1.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 mccabe-0.7.0 nose-1.3.7 packaging-26.2 platformdirs-4.4.0 pluggy-1.6.0 pycodestyle-2.14.0 pyflakes-3.4.0 pygments-2.20.0 pylint-3.3.9 pytest-8.4.2 pytest-cov-7.1.0 tomli-2.4.1 tomlkit-0.15.0 typing-extensions-4.15.0 werkzeug-3.1.8 zipp-3.23.1
+build	Lint with Flake8	﻿2026-05-15T22:22:51.2093239Z ##[group]Run flake8 service/ tests/
+build	Lint with Flake8	2026-05-15T22:22:51.2093562Z [36;1mflake8 service/ tests/[0m
+build	Lint with Flake8	2026-05-15T22:22:51.2127475Z shell: /usr/bin/bash -e {0}
+build	Lint with Flake8	2026-05-15T22:22:51.2127837Z env:
+build	Lint with Flake8	2026-05-15T22:22:51.2128086Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Lint with Flake8	2026-05-15T22:22:51.2128489Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	Lint with Flake8	2026-05-15T22:22:51.2128891Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Lint with Flake8	2026-05-15T22:22:51.2129237Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Lint with Flake8	2026-05-15T22:22:51.2129621Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Lint with Flake8	2026-05-15T22:22:51.2129971Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	Lint with Flake8	2026-05-15T22:22:51.2130270Z ##[endgroup]
+build	Run unit tests with nosetests	﻿2026-05-15T22:22:51.4457948Z ##[group]Run nosetests
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4458228Z [36;1mnosetests[0m
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4491889Z shell: /usr/bin/bash -e {0}
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4492123Z env:
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4492369Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4492780Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4493188Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4493536Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4493890Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4494246Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	Run unit tests with nosetests	2026-05-15T22:22:51.4494539Z ##[endgroup]
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8533633Z test_create_account (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8553292Z test_delete_account (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8563314Z test_health (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8572961Z test_list_accounts (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8590189Z test_read_account (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8608321Z test_update_account (tests.test_routes.TestAccountRoutes) ... ok
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8610220Z 
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8748524Z Name                  Stmts   Miss  Cover
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8749103Z -----------------------------------------
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8749614Z service/__init__.py       7      0   100%
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8750084Z service/routes.py        37      3    92%
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8750528Z -----------------------------------------
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8750985Z TOTAL                    44      3    93%
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8751560Z ----------------------------------------------------------------------
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8752160Z Ran 6 tests in 0.140s
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8752384Z 
+build	Run unit tests with nosetests	2026-05-15T22:22:51.8752504Z OK
+build	Post Set up Python	﻿2026-05-15T22:22:51.9152093Z Post job cleanup.
+build	Post Checkout code	﻿2026-05-15T22:22:52.0860487Z Post job cleanup.
+build	Post Checkout code	2026-05-15T22:22:52.1629843Z [command]/usr/bin/git version
+build	Post Checkout code	2026-05-15T22:22:52.1664593Z git version 2.54.0
+build	Post Checkout code	2026-05-15T22:22:52.1711070Z Temporarily overriding HOME='/home/runner/work/_temp/2630390b-ddb6-4423-a2ee-de656d97df01' before making global git config changes
+build	Post Checkout code	2026-05-15T22:22:52.1712413Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Checkout code	2026-05-15T22:22:52.1716285Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-capstone-project/devops-capstone-project
+build	Post Checkout code	2026-05-15T22:22:52.1748265Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Checkout code	2026-05-15T22:22:52.1777499Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Checkout code	2026-05-15T22:22:52.2001924Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Checkout code	2026-05-15T22:22:52.2024677Z http.https://github.com/.extraheader
+build	Post Checkout code	2026-05-15T22:22:52.2036400Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Checkout code	2026-05-15T22:22:52.2065367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Complete job	﻿2026-05-15T22:22:52.2391753Z Cleaning up orphan processes
+build	Complete job	2026-05-15T22:22:52.2656113Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3, actions/setup-python@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
