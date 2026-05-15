@@ -1,5 +1,5 @@
 NAME                          SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
-capstone-pipeline-run-gwgkq   True        Succeeded   52s         32s
+capstone-pipeline-run-gwgkq   True        Succeeded   90m         90m
 Name:         capstone-pipeline-run-gwgkq
 Namespace:    default
 Labels:       tekton.dev/pipeline=capstone-pipeline
@@ -50,9 +50,4 @@ Status:
       Running In Env With Injected Sidecars:  true
       Verification No Match Policy:           ignore
   Start Time:                                 2026-05-15T21:17:02Z
-Events:
-  Type    Reason     Age   From         Message
-  ----    ------     ----  ----         -------
-  Normal  Started    52s   PipelineRun  
-  Normal  Running    52s   PipelineRun  Tasks Completed: 0 (Failed: 0, Cancelled 0), Incomplete: 1, Skipped: 0
-  Normal  Succeeded  32s   PipelineRun  Tasks Completed: 1 (Failed: 0, Cancelled 0), Skipped: 0
+Events:                                       <none>
