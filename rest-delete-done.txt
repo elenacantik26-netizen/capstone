@@ -1,4 +1,3 @@
-Note: Unnecessary use of -X or --request, POST is already inferred.
 * Host localhost:8080 was resolved.
 * IPv6: ::1
 * IPv4: 127.0.0.1
@@ -6,19 +5,15 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying [::1]:8080...
 * Connected to localhost (::1) port 8080
-> POST /accounts HTTP/1.1
+> DELETE /accounts/1 HTTP/1.1
 > Host: localhost:8080
 > User-Agent: curl/8.5.0
 > Accept: */*
-> Content-Type: application/json
-> Content-Length: 49
 > 
-} [49 bytes data]
-< HTTP/1.1 201 CREATED
+< HTTP/1.1 204 NO CONTENT
 < Server: Werkzeug/3.1.8 Python/3.9.25
 < Date: Fri, 15 May 2026 22:22:09 GMT
-< Content-Type: application/json
-< Content-Length: 54
+< Content-Type: text/html; charset=utf-8
 < Access-Control-Allow-Origin: *
 < Permissions-Policy: browsing-topics=()
 < X-Frame-Options: SAMEORIGIN
@@ -27,7 +22,5 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 < Referrer-Policy: strict-origin-when-cross-origin
 < Connection: close
 < 
-{ [54 bytes data]
-100   103  100    54  100    49   5372   4874 --:--:-- --:--:-- --:--:-- 11444
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 * Closing connection
-{"email":"john@example.com","id":2,"name":"John Doe"}
