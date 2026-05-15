@@ -1,1 +1,1 @@
-echo "# Capstone Project" > README.md
+echo "# Capstone Project" > README.mds
