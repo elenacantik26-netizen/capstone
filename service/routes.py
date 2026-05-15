@@ -49,3 +49,8 @@ def delete_account(account_id):
         abort(404)
     del accounts[account_id]
     return '', 204
+
+
+@app.route("/")
+def index():
+    return jsonify({"name": "Account REST API Service", "version": "1.0"}), 200
