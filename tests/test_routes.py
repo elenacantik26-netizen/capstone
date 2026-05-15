@@ -1,11 +1,14 @@
-﻿import unittest
+import unittest
 from service import app
+from service import routes
 
 
 class TestAccountRoutes(unittest.TestCase):
 
     def setUp(self):
         self.client = app.test_client()
+        routes.accounts = {}
+        routes.next_id = 1
 
     def test_health(self):
         response = self.client.get('/health')
