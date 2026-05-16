@@ -1,21 +1,1453 @@
-NAME                                        READY   STATUS             RESTARTS   AGE
-pod/capstone-7fdc475f5d-fbj6p               0/1     ImagePullBackOff   0          31m
-pod/capstone-pipeline-run-gwgkq-build-pod   0/1     Completed          0          24m
+NAME                                                    READY   STATUS             RESTARTS   AGE
+pod/capstone-7fdc475f5d-fbj6p                           0/1     ImagePullBackOff   0          5h47m
+pod/capstone-pipeline-run-gwgkq-build-pod               0/1     Completed          0          5h40m
+pod/capstone-pipeline-run-ksv85-flake8-lint-pod         0/1     Completed          0          52m
+pod/capstone-pipeline-run-ksv85-repo-clone-pod          0/1     Completed          0          52m
+pod/capstone-pipeline-run-ksv85-run-tests-pod           0/1     Completed          0          52m
+pod/capstone-pipeline-run-ksv85-workspace-cleanup-pod   0/1     Completed          0          53m
+pod/capstone-pipeline-run-xmctw-flake8-lint-pod         0/1     Completed          0          51m
+pod/capstone-pipeline-run-xmctw-repo-clone-pod          0/1     Completed          0          51m
+pod/capstone-pipeline-run-xmctw-run-tests-pod           0/1     Completed          0          51m
+pod/capstone-pipeline-run-xmctw-workspace-cleanup-pod   0/1     Completed          0          51m
 
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   31m
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   5h47m
 
 NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/capstone   0/1     1            0           31m
+deployment.apps/capstone   0/1     1            0           5h47m
 
 NAME                                  DESIRED   CURRENT   READY   AGE
-replicaset.apps/capstone-7fdc475f5d   1         1         0       31m
-NAME                                    READY   STATUS             RESTARTS   AGE
-capstone-7fdc475f5d-fbj6p               0/1     ImagePullBackOff   0          31m
-capstone-pipeline-run-gwgkq-build-pod   0/1     Completed          0          24m
-NAME       READY   UP-TO-DATE   AVAILABLE   AGE
-capstone   0/1     1            0           31m
-NAME                  DESIRED   CURRENT   READY   AGE
-capstone-7fdc475f5d   1         1         0       31m
-NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   31m
+replicaset.apps/capstone-7fdc475f5d   1         1         0       5h47m
+Name:                   capstone
+Namespace:              default
+CreationTimestamp:      Fri, 15 May 2026 21:09:58 +0000
+Labels:                 app=capstone
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=capstone
+Replicas:               1 desired | 1 updated | 1 total | 0 available | 1 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=capstone
+  Containers:
+   capstone:
+    Image:         capstone
+    Port:          <none>
+    Host Port:     <none>
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    False   ProgressDeadlineExceeded
+OldReplicaSets:  <none>
+NewReplicaSet:   capstone-7fdc475f5d (1/1 replicas created)
+Events:          <none>
+Name:             capstone-7fdc475f5d-fbj6p
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Fri, 15 May 2026 21:09:58 +0000
+Labels:           app=capstone
+                  pod-template-hash=7fdc475f5d
+Annotations:      <none>
+Status:           Pending
+IP:               10.244.0.12
+IPs:
+  IP:           10.244.0.12
+Controlled By:  ReplicaSet/capstone-7fdc475f5d
+Containers:
+  capstone:
+    Container ID:   
+    Image:          capstone
+    Image ID:       
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-vkg9d (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-vkg9d:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-gwgkq-build-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Fri, 15 May 2026 21:17:02 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-gwgkq
+                  tekton.dev/pipelineRunUID=6e14012e-da27-40be-b701-0c98d34bafef
+                  tekton.dev/pipelineTask=build
+                  tekton.dev/task=build-task
+                  tekton.dev/taskRun=capstone-pipeline-run-gwgkq-build
+                  tekton.dev/taskRunUID=87792497-0e12-4308-a854-af89361ef583
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+Reason:           DeadlineExceeded
+Message:          Pod was active on the node longer than the specified deadline
+IP:               
+IPs:              <none>
+Controlled By:    TaskRun/capstone-pipeline-run-gwgkq-build
+Init Containers:
+  prepare:
+    Container ID:  docker://5b72fc1a6d48ac542cda9051e045dafcfeeb86e4ffdb4c7205b6ffb6e96fd3a0
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-build
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Fri, 15 May 2026 21:17:08 +0000
+      Finished:     Fri, 15 May 2026 21:17:09 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wbr57 (ro)
+Containers:
+  step-build:
+    Container ID:  docker://18d6e54f14ccf1e49d574fe41a3e29ec00f0529fb162b0168c47e17abf4a950d
+    Image:         python:3.9-slim
+    Image ID:      docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Building capstone...
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-15T21:17:21.788Z","type":3}]
+      Exit Code:    0
+      Started:      Fri, 15 May 2026 21:17:20 +0000
+      Finished:     Fri, 15 May 2026 21:17:21 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wbr57 (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-wbr57:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-ksv85-flake8-lint-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:04:39 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+                  tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+                  tekton.dev/pipelineTask=flake8-lint
+                  tekton.dev/task=flake8-lint
+                  tekton.dev/taskRun=capstone-pipeline-run-ksv85-flake8-lint
+                  tekton.dev/taskRunUID=6c0bd17d-b703-4573-b7df-f1b02bdcb2ac
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.17
+IPs:
+  IP:           10.244.0.17
+Controlled By:  TaskRun/capstone-pipeline-run-ksv85-flake8-lint
+Init Containers:
+  prepare:
+    Container ID:  docker://4db5ff04f7a8c77d70302afa78e7c65445f5d261afdf0c6e7d98f00926675a48
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-lint
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:39 +0000
+      Finished:     Sat, 16 May 2026 02:04:40 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-8rbzm (ro)
+Containers:
+  step-lint:
+    Container ID:  docker://bf3384601354777fc23aff2d71593c66c51ddf3bbec3d0c9981dc4eebcd77e97
+    Image:         python:3.9-slim
+    Image ID:      docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Flake8 linting passed
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:04:43.462Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:42 +0000
+      Finished:     Sat, 16 May 2026 02:04:44 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-8rbzm (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-8rbzm:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-ksv85-repo-clone-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:04:32 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+                  tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+                  tekton.dev/pipelineTask=repo-clone
+                  tekton.dev/task=repo-clone
+                  tekton.dev/taskRun=capstone-pipeline-run-ksv85-repo-clone
+                  tekton.dev/taskRunUID=1577bfe6-e03f-4027-8696-b31e5a1cbb64
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.16
+IPs:
+  IP:           10.244.0.16
+Controlled By:  TaskRun/capstone-pipeline-run-ksv85-repo-clone
+Init Containers:
+  prepare:
+    Container ID:  docker://3f934d3ac401b6028426a24ca92476fcf63b02464e07ad4749e38d2a5fe010ca
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-clone
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:32 +0000
+      Finished:     Sat, 16 May 2026 02:04:33 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tmjl6 (ro)
+Containers:
+  step-clone:
+    Container ID:  docker://8c6ccc875895ddffdbc565fd0b4b61f95b84705ecf25c96adfb75c00989f223f
+    Image:         alpine
+    Image ID:      docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Repository cloned successfully
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:04:38.373Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:37 +0000
+      Finished:     Sat, 16 May 2026 02:04:38 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tmjl6 (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-tmjl6:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-ksv85-run-tests-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:04:44 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+                  tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+                  tekton.dev/pipelineTask=run-tests
+                  tekton.dev/task=run-tests
+                  tekton.dev/taskRun=capstone-pipeline-run-ksv85-run-tests
+                  tekton.dev/taskRunUID=6ddab6a0-1a53-4fb9-b052-789459a7de97
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.18
+IPs:
+  IP:           10.244.0.18
+Controlled By:  TaskRun/capstone-pipeline-run-ksv85-run-tests
+Init Containers:
+  prepare:
+    Container ID:  docker://29ed49edecc40b6fa48db011e7b62f5b96c3e7561f7a8399669a9b7dd0aa7620
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-test
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:45 +0000
+      Finished:     Sat, 16 May 2026 02:04:45 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-527cw (ro)
+Containers:
+  step-test:
+    Container ID:  docker://0be313f63da2334446a457e1ba122047ef90ee8a97fc1a0b6693f7616197a837
+    Image:         python:3.9-slim
+    Image ID:      docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Nosetests execution passed
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:04:49.588Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:47 +0000
+      Finished:     Sat, 16 May 2026 02:04:49 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-527cw (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-527cw:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-ksv85-workspace-cleanup-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:04:17 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+                  tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+                  tekton.dev/pipelineTask=workspace-cleanup
+                  tekton.dev/task=workspace-cleanup
+                  tekton.dev/taskRun=capstone-pipeline-run-ksv85-workspace-cleanup
+                  tekton.dev/taskRunUID=5456c7ea-9285-4c07-88d1-d1d09b404e52
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.15
+IPs:
+  IP:           10.244.0.15
+Controlled By:  TaskRun/capstone-pipeline-run-ksv85-workspace-cleanup
+Init Containers:
+  prepare:
+    Container ID:  docker://da717f363a9381855177808a4f2fae99809215a92925ecbb707d275f8d538c9b
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-cleanup
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:18 +0000
+      Finished:     Sat, 16 May 2026 02:04:24 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pkmkn (ro)
+Containers:
+  step-cleanup:
+    Container ID:  docker://70790899328a2472a5d2e9568f5aa6ae65e6b33bff26e10f0bc7e8fefb81a038
+    Image:         alpine
+    Image ID:      docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Workspace cleanup done
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:04:31.984Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:04:29 +0000
+      Finished:     Sat, 16 May 2026 02:04:31 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pkmkn (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-pkmkn:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-xmctw-flake8-lint-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:05:58 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+                  tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+                  tekton.dev/pipelineTask=flake8-lint
+                  tekton.dev/task=flake8-lint
+                  tekton.dev/taskRun=capstone-pipeline-run-xmctw-flake8-lint
+                  tekton.dev/taskRunUID=57a84263-d5ce-4d78-8dbe-f6435d610105
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.21
+IPs:
+  IP:           10.244.0.21
+Controlled By:  TaskRun/capstone-pipeline-run-xmctw-flake8-lint
+Init Containers:
+  prepare:
+    Container ID:  docker://a0ed51ceb50ced4b1cc4e7a7dd38b9f067582d89f6e44198d5e840fac7a0b6c7
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-lint
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:05:59 +0000
+      Finished:     Sat, 16 May 2026 02:05:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-slx6w (ro)
+Containers:
+  step-lint:
+    Container ID:  docker://4492704b53b8ef146f7a2a5b454b670db31d40297e453289cdf26d6290e17532
+    Image:         python:3.9-slim
+    Image ID:      docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Flake8 linting passed
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:06:01.676Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:06:00 +0000
+      Finished:     Sat, 16 May 2026 02:06:01 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-slx6w (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-slx6w:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-xmctw-repo-clone-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:05:53 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+                  tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+                  tekton.dev/pipelineTask=repo-clone
+                  tekton.dev/task=repo-clone
+                  tekton.dev/taskRun=capstone-pipeline-run-xmctw-repo-clone
+                  tekton.dev/taskRunUID=785a4be9-d452-40a9-80e1-39ec58c17fcd
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.20
+IPs:
+  IP:           10.244.0.20
+Controlled By:  TaskRun/capstone-pipeline-run-xmctw-repo-clone
+Init Containers:
+  prepare:
+    Container ID:  docker://89574bba744e877782c407a9478defcbb7b3b8297cd3591c8711454d75a36aa1
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-clone
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:05:54 +0000
+      Finished:     Sat, 16 May 2026 02:05:54 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jr4nj (ro)
+Containers:
+  step-clone:
+    Container ID:  docker://e81b9419e363d2e7b2e7c98041dadad4ecc797d9170e88cde6e1f9af939c8653
+    Image:         alpine
+    Image ID:      docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Repository cloned successfully
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:05:58.108Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:05:56 +0000
+      Finished:     Sat, 16 May 2026 02:05:58 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jr4nj (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-jr4nj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-xmctw-run-tests-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:06:02 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+                  tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+                  tekton.dev/pipelineTask=run-tests
+                  tekton.dev/task=run-tests
+                  tekton.dev/taskRun=capstone-pipeline-run-xmctw-run-tests
+                  tekton.dev/taskRunUID=a06a57f1-3c26-4546-b253-0b8fbdee27a4
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.22
+IPs:
+  IP:           10.244.0.22
+Controlled By:  TaskRun/capstone-pipeline-run-xmctw-run-tests
+Init Containers:
+  prepare:
+    Container ID:  docker://b753c80fe11a1e788865b19df61d365b77636795da1550ec453bd67a673ace46
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-test
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:06:03 +0000
+      Finished:     Sat, 16 May 2026 02:06:03 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-h95lb (ro)
+Containers:
+  step-test:
+    Container ID:  docker://90c882dc8f818dd85e47d78fb773743b58116f35c5d4bb84445547685704cc8f
+    Image:         python:3.9-slim
+    Image ID:      docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Nosetests execution passed
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:06:05.729Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:06:04 +0000
+      Finished:     Sat, 16 May 2026 02:06:05 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-h95lb (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-h95lb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             capstone-pipeline-run-xmctw-workspace-cleanup-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 May 2026 02:05:46 +0000
+Labels:           app.kubernetes.io/managed-by=tekton-pipelines
+                  tekton.dev/memberOf=tasks
+                  tekton.dev/pipeline=capstone-pipeline
+                  tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+                  tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+                  tekton.dev/pipelineTask=workspace-cleanup
+                  tekton.dev/task=workspace-cleanup
+                  tekton.dev/taskRun=capstone-pipeline-run-xmctw-workspace-cleanup
+                  tekton.dev/taskRunUID=37908706-be5b-45d9-a750-15f1d44f5953
+Annotations:      pipeline.tekton.dev/release: fcba522
+                  tekton.dev/ready: READY
+Status:           Succeeded
+IP:               10.244.0.19
+IPs:
+  IP:           10.244.0.19
+Controlled By:  TaskRun/capstone-pipeline-run-xmctw-workspace-cleanup
+Init Containers:
+  prepare:
+    Container ID:  docker://40d69b8a6618203d75a4c749ff131d69a4ca1ae3bc3e9363d9d3ee61b9008127
+    Image:         ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296:v1.6.0@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Image ID:      docker-pullable://ghcr.io/tektoncd/pipeline/entrypoint-bff0a22da108bc2f16c818c97641a296@sha256:255ea8fadab1481fbd1e562d9ac7d4008cd9515de5f952647c8959028c8990a0
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /ko-app/entrypoint
+      init
+      /ko-app/entrypoint
+      /tekton/bin/entrypoint
+      step-cleanup
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:05:46 +0000
+      Finished:     Sat, 16 May 2026 02:05:47 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/bin from tekton-internal-bin (rw)
+      /tekton/steps from tekton-internal-steps (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-5k5ss (ro)
+Containers:
+  step-cleanup:
+    Container ID:  docker://832fe78cd24c71c28c78bdf4eaf74523eaeb50e387e9d3f21d1eb9f53f5f3c01
+    Image:         alpine
+    Image ID:      docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /tekton/bin/entrypoint
+    Args:
+      -wait_file
+      /tekton/downward/ready
+      -wait_file_content
+      -post_file
+      /tekton/run/0/out
+      -termination_path
+      /tekton/termination
+      -step_metadata_dir
+      /tekton/run/0/status
+      -entrypoint
+      echo
+      --
+      Workspace cleanup done
+    State:          Terminated
+      Reason:       Completed
+      Message:      [{"key":"StartedAt","value":"2026-05-16T02:05:52.369Z","type":3}]
+      Exit Code:    0
+      Started:      Sat, 16 May 2026 02:05:50 +0000
+      Finished:     Sat, 16 May 2026 02:05:52 +0000
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /tekton/artifacts from tekton-internal-artifacts (rw)
+      /tekton/bin from tekton-internal-bin (ro)
+      /tekton/creds from tekton-creds-init-home-0 (rw)
+      /tekton/downward from tekton-internal-downward (ro)
+      /tekton/home from tekton-internal-home (rw)
+      /tekton/results from tekton-internal-results (rw)
+      /tekton/run/0 from tekton-internal-run-0 (rw)
+      /tekton/steps from tekton-internal-steps (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-5k5ss (ro)
+      /workspace from tekton-internal-workspace (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  tekton-internal-workspace:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-home:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-results:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-steps:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-artifacts:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-bin:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tekton-internal-downward:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.annotations['tekton.dev/ready'] -> ready
+  tekton-creds-init-home-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  tekton-internal-run-0:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-5k5ss:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Name:           capstone-7fdc475f5d
+Namespace:      default
+Selector:       app=capstone,pod-template-hash=7fdc475f5d
+Labels:         app=capstone
+                pod-template-hash=7fdc475f5d
+Annotations:    deployment.kubernetes.io/desired-replicas: 1
+                deployment.kubernetes.io/max-replicas: 2
+                deployment.kubernetes.io/revision: 1
+Controlled By:  Deployment/capstone
+Replicas:       1 current / 1 desired
+Pods Status:    0 Running / 1 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=capstone
+           pod-template-hash=7fdc475f5d
+  Containers:
+   capstone:
+    Image:         capstone
+    Port:          <none>
+    Host Port:     <none>
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Events:            <none>
+Name:                     kubernetes
+Namespace:                default
+Labels:                   component=apiserver
+                          provider=kubernetes
+Annotations:              <none>
+Selector:                 <none>
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.96.0.1
+IPs:                      10.96.0.1
+Port:                     https  443/TCP
+TargetPort:               8443/TCP
+Endpoints:                192.168.49.2:8443
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
