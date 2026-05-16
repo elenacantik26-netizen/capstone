@@ -1,12 +1,15 @@
-Traceback (most recent call last):
-  File "/home/codespace/.python/current/bin/nosetests", line 3, in <module>
-    from nose import run_exit
-  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nose/__init__.py", line 1, in <module>
-    from nose.core import collector, main, run, run_exit, runmodule
-  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nose/core.py", line 12, in <module>
-    from nose.loader import defaultTestLoader
-  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nose/loader.py", line 21, in <module>
-    from nose.importer import Importer, add_path, remove_path
-  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nose/importer.py", line 12, in <module>
-    from imp import find_module, load_module, acquire_lock, release_lock
-ModuleNotFoundError: No module named 'imp'
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-9.0.3, pluggy-1.6.0 -- /home/codespace/.python/current/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/capstone
+plugins: cov-7.1.0, anyio-4.12.1
+collecting ... collected 6 items
+
+tests/test_routes.py::TestAccountRoutes::test_create_account PASSED      [ 16%]
+tests/test_routes.py::TestAccountRoutes::test_delete_account PASSED      [ 33%]
+tests/test_routes.py::TestAccountRoutes::test_health PASSED              [ 50%]
+tests/test_routes.py::TestAccountRoutes::test_list_accounts PASSED       [ 66%]
+tests/test_routes.py::TestAccountRoutes::test_read_account PASSED        [ 83%]
+tests/test_routes.py::TestAccountRoutes::test_update_account PASSED      [100%]
+
+============================== 6 passed in 0.33s ===============================
