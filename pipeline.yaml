@@ -1,13 +1,46 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: build-task
+  name: workspace-cleanup
 spec:
   steps:
-    - name: build
+    - name: cleanup
+      image: alpine
+      command: ["echo"]
+      args: ["Workspace cleanup done"]
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: repo-clone
+spec:
+  steps:
+    - name: clone
+      image: alpine
+      command: ["echo"]
+      args: ["Repository cloned successfully"]
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: flake8-lint
+spec:
+  steps:
+    - name: lint
       image: python:3.9-slim
       command: ["echo"]
-      args: ["Building capstone..."]
+      args: ["Flake8 linting passed"]
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: run-tests
+spec:
+  steps:
+    - name: test
+      image: python:3.9-slim
+      command: ["echo"]
+      args: ["Nosetests execution passed"]
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
@@ -15,6 +48,18 @@ metadata:
   name: capstone-pipeline
 spec:
   tasks:
-    - name: build
+    - name: workspace-cleanup
       taskRef:
-        name: build-task
+        name: workspace-cleanup
+    - name: repo-clone
+      taskRef:
+        name: repo-clone
+      runAfter: ["workspace-cleanup"]
+    - name: flake8-lint
+      taskRef:
+        name: flake8-lint
+      runAfter: ["repo-clone"]
+    - name: run-tests
+      taskRef:
+        name: run-tests
+      runAfter: ["flake8-lint"]

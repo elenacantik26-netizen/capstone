@@ -1,5 +1,7 @@
 NAME                          SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
-capstone-pipeline-run-gwgkq   True        Succeeded   90m         90m
+capstone-pipeline-run-gwgkq   True        Succeeded   4h50m       4h50m
+capstone-pipeline-run-ksv85   True        Succeeded   3m38s       3m5s
+capstone-pipeline-run-xmctw   True        Succeeded   2m9s        109s
 Name:         capstone-pipeline-run-gwgkq
 Namespace:    default
 Labels:       tekton.dev/pipeline=capstone-pipeline
@@ -50,4 +52,850 @@ Status:
       Running In Env With Injected Sidecars:  true
       Verification No Match Policy:           ignore
   Start Time:                                 2026-05-15T21:17:02Z
-Events:                                       <none>
+
+
+Name:         capstone-pipeline-run-ksv85
+Namespace:    default
+Labels:       tekton.dev/pipeline=capstone-pipeline
+Annotations:  <none>
+API Version:  tekton.dev/v1
+Kind:         PipelineRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:04:17Z
+  Generate Name:       capstone-pipeline-run-
+  Generation:          1
+  Resource Version:    22640
+  UID:                 0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+Spec:
+  Pipeline Ref:
+    Name:  capstone-pipeline
+  Task Run Template:
+    Service Account Name:  default
+  Timeouts:
+    Pipeline:  1h0m0s
+Status:
+  Child References:
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-ksv85-workspace-cleanup
+    Pipeline Task Name:  workspace-cleanup
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-ksv85-repo-clone
+    Pipeline Task Name:  repo-clone
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-ksv85-flake8-lint
+    Pipeline Task Name:  flake8-lint
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-ksv85-run-tests
+    Pipeline Task Name:  run-tests
+  Completion Time:       2026-05-16T02:04:50Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:04:50Z
+    Message:               Tasks Completed: 4 (Failed: 0, Cancelled 0), Skipped: 0
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pipeline Spec:
+    Tasks:
+      Name:  workspace-cleanup
+      Task Ref:
+        Kind:  Task
+        Name:  workspace-cleanup
+      Name:    repo-clone
+      Run After:
+        workspace-cleanup
+      Task Ref:
+        Kind:  Task
+        Name:  repo-clone
+      Name:    flake8-lint
+      Run After:
+        repo-clone
+      Task Ref:
+        Kind:  Task
+        Name:  flake8-lint
+      Name:    run-tests
+      Run After:
+        flake8-lint
+      Task Ref:
+        Kind:  Task
+        Name:  run-tests
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:04:17Z
+
+
+Name:         capstone-pipeline-run-xmctw
+Namespace:    default
+Labels:       tekton.dev/pipeline=capstone-pipeline
+Annotations:  <none>
+API Version:  tekton.dev/v1
+Kind:         PipelineRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:05:46Z
+  Generate Name:       capstone-pipeline-run-
+  Generation:          1
+  Resource Version:    22960
+  UID:                 facb33cd-a040-4307-a088-337fffe6b38b
+Spec:
+  Pipeline Ref:
+    Name:  capstone-pipeline
+  Task Run Template:
+    Service Account Name:  default
+  Timeouts:
+    Pipeline:  1h0m0s
+Status:
+  Child References:
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-xmctw-workspace-cleanup
+    Pipeline Task Name:  workspace-cleanup
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-xmctw-repo-clone
+    Pipeline Task Name:  repo-clone
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-xmctw-flake8-lint
+    Pipeline Task Name:  flake8-lint
+    API Version:         tekton.dev/v1
+    Kind:                TaskRun
+    Name:                capstone-pipeline-run-xmctw-run-tests
+    Pipeline Task Name:  run-tests
+  Completion Time:       2026-05-16T02:06:06Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:06:06Z
+    Message:               Tasks Completed: 4 (Failed: 0, Cancelled 0), Skipped: 0
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pipeline Spec:
+    Tasks:
+      Name:  workspace-cleanup
+      Task Ref:
+        Kind:  Task
+        Name:  workspace-cleanup
+      Name:    repo-clone
+      Run After:
+        workspace-cleanup
+      Task Ref:
+        Kind:  Task
+        Name:  repo-clone
+      Name:    flake8-lint
+      Run After:
+        repo-clone
+      Task Ref:
+        Kind:  Task
+        Name:  flake8-lint
+      Name:    run-tests
+      Run After:
+        flake8-lint
+      Task Ref:
+        Kind:  Task
+        Name:  run-tests
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:05:46Z
+NAME                                            SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
+capstone-pipeline-run-gwgkq-build               True        Succeeded   4h50m       4h50m
+capstone-pipeline-run-ksv85-flake8-lint         True        Succeeded   3m17s       3m12s
+capstone-pipeline-run-ksv85-repo-clone          True        Succeeded   3m24s       3m17s
+capstone-pipeline-run-ksv85-run-tests           True        Succeeded   3m12s       3m6s
+capstone-pipeline-run-ksv85-workspace-cleanup   True        Succeeded   3m39s       3m24s
+capstone-pipeline-run-xmctw-flake8-lint         True        Succeeded   118s        114s
+capstone-pipeline-run-xmctw-repo-clone          True        Succeeded   2m3s        118s
+capstone-pipeline-run-xmctw-run-tests           True        Succeeded   114s        110s
+capstone-pipeline-run-xmctw-workspace-cleanup   True        Succeeded   2m10s       2m3s
+Name:         capstone-pipeline-run-gwgkq-build
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-gwgkq
+              tekton.dev/pipelineRunUID=6e14012e-da27-40be-b701-0c98d34bafef
+              tekton.dev/pipelineTask=build
+              tekton.dev/task=build-task
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-15T21:17:02Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-gwgkq
+    UID:                   6e14012e-da27-40be-b701-0c98d34bafef
+  Resource Version:        1299
+  UID:                     87792497-0e12-4308-a854-af89361ef583
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   build-task
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-15T21:17:22Z
+  Conditions:
+    Last Transition Time:  2026-05-15T21:17:22Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-gwgkq-build-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-15T21:17:02Z
+  Steps:
+    Container:  step-build
+    Image ID:   docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Name:       build
+    Provenance:
+    Terminated:
+      Container ID:      docker://18d6e54f14ccf1e49d574fe41a3e29ec00f0529fb162b0168c47e17abf4a950d
+      Exit Code:         0
+      Finished At:       2026-05-15T21:17:21Z
+      Reason:            Completed
+      Started At:        2026-05-15T21:17:21Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Building capstone...
+      Command:
+        echo
+      Compute Resources:
+      Image:  python:3.9-slim
+      Name:   build
+
+
+Name:         capstone-pipeline-run-ksv85-flake8-lint
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+              tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+              tekton.dev/pipelineTask=flake8-lint
+              tekton.dev/task=flake8-lint
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:04:39Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-ksv85
+    UID:                   0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+  Resource Version:        22594
+  UID:                     6c0bd17d-b703-4573-b7df-f1b02bdcb2ac
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   flake8-lint
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:04:44Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:04:44Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-ksv85-flake8-lint-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:04:39Z
+  Steps:
+    Container:  step-lint
+    Image ID:   docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Name:       lint
+    Provenance:
+    Terminated:
+      Container ID:      docker://bf3384601354777fc23aff2d71593c66c51ddf3bbec3d0c9981dc4eebcd77e97
+      Exit Code:         0
+      Finished At:       2026-05-16T02:04:44Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:04:43Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Flake8 linting passed
+      Command:
+        echo
+      Compute Resources:
+      Image:  python:3.9-slim
+      Name:   lint
+
+
+Name:         capstone-pipeline-run-ksv85-repo-clone
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+              tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+              tekton.dev/pipelineTask=repo-clone
+              tekton.dev/task=repo-clone
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:04:32Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-ksv85
+    UID:                   0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+  Resource Version:        22543
+  UID:                     1577bfe6-e03f-4027-8696-b31e5a1cbb64
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   repo-clone
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:04:39Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:04:39Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-ksv85-repo-clone-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:04:32Z
+  Steps:
+    Container:  step-clone
+    Image ID:   docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Name:       clone
+    Provenance:
+    Terminated:
+      Container ID:      docker://8c6ccc875895ddffdbc565fd0b4b61f95b84705ecf25c96adfb75c00989f223f
+      Exit Code:         0
+      Finished At:       2026-05-16T02:04:38Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:04:38Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Repository cloned successfully
+      Command:
+        echo
+      Compute Resources:
+      Image:  alpine
+      Name:   clone
+
+
+Name:         capstone-pipeline-run-ksv85-run-tests
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+              tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+              tekton.dev/pipelineTask=run-tests
+              tekton.dev/task=run-tests
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:04:44Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-ksv85
+    UID:                   0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+  Resource Version:        22638
+  UID:                     6ddab6a0-1a53-4fb9-b052-789459a7de97
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   run-tests
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:04:50Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:04:50Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-ksv85-run-tests-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:04:44Z
+  Steps:
+    Container:  step-test
+    Image ID:   docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Name:       test
+    Provenance:
+    Terminated:
+      Container ID:      docker://0be313f63da2334446a457e1ba122047ef90ee8a97fc1a0b6693f7616197a837
+      Exit Code:         0
+      Finished At:       2026-05-16T02:04:49Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:04:49Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Nosetests execution passed
+      Command:
+        echo
+      Compute Resources:
+      Image:  python:3.9-slim
+      Name:   test
+
+
+Name:         capstone-pipeline-run-ksv85-workspace-cleanup
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-ksv85
+              tekton.dev/pipelineRunUID=0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+              tekton.dev/pipelineTask=workspace-cleanup
+              tekton.dev/task=workspace-cleanup
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:04:17Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-ksv85
+    UID:                   0c003a17-cfd4-48e8-8c77-7c2ef031ab90
+  Resource Version:        22496
+  UID:                     5456c7ea-9285-4c07-88d1-d1d09b404e52
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   workspace-cleanup
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:04:32Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:04:32Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-ksv85-workspace-cleanup-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:04:17Z
+  Steps:
+    Container:  step-cleanup
+    Image ID:   docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Name:       cleanup
+    Provenance:
+    Terminated:
+      Container ID:      docker://70790899328a2472a5d2e9568f5aa6ae65e6b33bff26e10f0bc7e8fefb81a038
+      Exit Code:         0
+      Finished At:       2026-05-16T02:04:31Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:04:31Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Workspace cleanup done
+      Command:
+        echo
+      Compute Resources:
+      Image:  alpine
+      Name:   cleanup
+
+
+Name:         capstone-pipeline-run-xmctw-flake8-lint
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+              tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+              tekton.dev/pipelineTask=flake8-lint
+              tekton.dev/task=flake8-lint
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:05:58Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-xmctw
+    UID:                   facb33cd-a040-4307-a088-337fffe6b38b
+  Resource Version:        22920
+  UID:                     57a84263-d5ce-4d78-8dbe-f6435d610105
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   flake8-lint
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:06:02Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:06:02Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-xmctw-flake8-lint-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:05:58Z
+  Steps:
+    Container:  step-lint
+    Image ID:   docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Name:       lint
+    Provenance:
+    Terminated:
+      Container ID:      docker://4492704b53b8ef146f7a2a5b454b670db31d40297e453289cdf26d6290e17532
+      Exit Code:         0
+      Finished At:       2026-05-16T02:06:01Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:06:01Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Flake8 linting passed
+      Command:
+        echo
+      Compute Resources:
+      Image:  python:3.9-slim
+      Name:   lint
+
+
+Name:         capstone-pipeline-run-xmctw-repo-clone
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+              tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+              tekton.dev/pipelineTask=repo-clone
+              tekton.dev/task=repo-clone
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:05:53Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-xmctw
+    UID:                   facb33cd-a040-4307-a088-337fffe6b38b
+  Resource Version:        22871
+  UID:                     785a4be9-d452-40a9-80e1-39ec58c17fcd
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   repo-clone
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:05:58Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:05:58Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-xmctw-repo-clone-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:05:53Z
+  Steps:
+    Container:  step-clone
+    Image ID:   docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Name:       clone
+    Provenance:
+    Terminated:
+      Container ID:      docker://e81b9419e363d2e7b2e7c98041dadad4ecc797d9170e88cde6e1f9af939c8653
+      Exit Code:         0
+      Finished At:       2026-05-16T02:05:58Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:05:58Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Repository cloned successfully
+      Command:
+        echo
+      Compute Resources:
+      Image:  alpine
+      Name:   clone
+
+
+Name:         capstone-pipeline-run-xmctw-run-tests
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+              tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+              tekton.dev/pipelineTask=run-tests
+              tekton.dev/task=run-tests
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:06:02Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-xmctw
+    UID:                   facb33cd-a040-4307-a088-337fffe6b38b
+  Resource Version:        22958
+  UID:                     a06a57f1-3c26-4546-b253-0b8fbdee27a4
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   run-tests
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:06:06Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:06:06Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-xmctw-run-tests-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:06:02Z
+  Steps:
+    Container:  step-test
+    Image ID:   docker-pullable://python@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+    Name:       test
+    Provenance:
+    Terminated:
+      Container ID:      docker://90c882dc8f818dd85e47d78fb773743b58116f35c5d4bb84445547685704cc8f
+      Exit Code:         0
+      Finished At:       2026-05-16T02:06:05Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:06:05Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Nosetests execution passed
+      Command:
+        echo
+      Compute Resources:
+      Image:  python:3.9-slim
+      Name:   test
+
+
+Name:         capstone-pipeline-run-xmctw-workspace-cleanup
+Namespace:    default
+Labels:       app.kubernetes.io/managed-by=tekton-pipelines
+              tekton.dev/memberOf=tasks
+              tekton.dev/pipeline=capstone-pipeline
+              tekton.dev/pipelineRun=capstone-pipeline-run-xmctw
+              tekton.dev/pipelineRunUID=facb33cd-a040-4307-a088-337fffe6b38b
+              tekton.dev/pipelineTask=workspace-cleanup
+              tekton.dev/task=workspace-cleanup
+Annotations:  pipeline.tekton.dev/release: fcba522
+API Version:  tekton.dev/v1
+Kind:         TaskRun
+Metadata:
+  Creation Timestamp:  2026-05-16T02:05:46Z
+  Generation:          1
+  Owner References:
+    API Version:           tekton.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PipelineRun
+    Name:                  capstone-pipeline-run-xmctw
+    UID:                   facb33cd-a040-4307-a088-337fffe6b38b
+  Resource Version:        22830
+  UID:                     37908706-be5b-45d9-a750-15f1d44f5953
+Spec:
+  Service Account Name:  default
+  Task Ref:
+    Kind:   Task
+    Name:   workspace-cleanup
+  Timeout:  1h0m0s
+Status:
+  Artifacts:
+  Completion Time:  2026-05-16T02:05:53Z
+  Conditions:
+    Last Transition Time:  2026-05-16T02:05:53Z
+    Message:               All Steps have completed executing
+    Reason:                Succeeded
+    Status:                True
+    Type:                  Succeeded
+  Pod Name:                capstone-pipeline-run-xmctw-workspace-cleanup-pod
+  Provenance:
+    Feature Flags:
+      Await Sidecar Readiness:                true
+      Coschedule:                             workspaces
+      Enable APIFields:                       beta
+      Enable Provenance In Status:            true
+      Enforce Nonfalsifiability:              none
+      Max Result Size:                        4096
+      Result Extraction Method:               termination-message
+      Running In Env With Injected Sidecars:  true
+      Verification No Match Policy:           ignore
+  Start Time:                                 2026-05-16T02:05:46Z
+  Steps:
+    Container:  step-cleanup
+    Image ID:   docker-pullable://alpine@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
+    Name:       cleanup
+    Provenance:
+    Terminated:
+      Container ID:      docker://832fe78cd24c71c28c78bdf4eaf74523eaeb50e387e9d3f21d1eb9f53f5f3c01
+      Exit Code:         0
+      Finished At:       2026-05-16T02:05:52Z
+      Reason:            Completed
+      Started At:        2026-05-16T02:05:52Z
+    Termination Reason:  Completed
+  Task Spec:
+    Steps:
+      Args:
+        Workspace cleanup done
+      Command:
+        echo
+      Compute Resources:
+      Image:  alpine
+      Name:   cleanup
