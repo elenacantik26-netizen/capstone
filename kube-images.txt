@@ -1,2 +1,2 @@
-IMAGE             ID             DISK USAGE   CONTENT SIZE   EXTRA
-capstone:latest   089978035f43        233MB         55.1MB   U    
+REPOSITORY   TAG       IMAGE ID       CREATED AT                      SIZE
+capstone     latest    089978035f43   2026-05-15 20:48:23 +0000 UTC   233MB
