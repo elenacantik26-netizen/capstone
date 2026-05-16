@@ -3,13 +3,14 @@ platform linux -- Python 3.12.1, pytest-9.0.3, pluggy-1.6.0 -- /home/codespace/.
 cachedir: .pytest_cache
 rootdir: /workspaces/capstone
 plugins: cov-7.1.0, anyio-4.12.1
-collecting ... collected 6 items
+collecting ... collected 7 items
 
-tests/test_routes.py::TestAccountRoutes::test_create_account PASSED      [ 16%]
-tests/test_routes.py::TestAccountRoutes::test_delete_account PASSED      [ 33%]
-tests/test_routes.py::TestAccountRoutes::test_health PASSED              [ 50%]
-tests/test_routes.py::TestAccountRoutes::test_list_accounts PASSED       [ 66%]
-tests/test_routes.py::TestAccountRoutes::test_read_account PASSED        [ 83%]
+tests/test_routes.py::TestAccountRoutes::test_cors_headers PASSED        [ 14%]
+tests/test_routes.py::TestAccountRoutes::test_create_account PASSED      [ 28%]
+tests/test_routes.py::TestAccountRoutes::test_delete_account PASSED      [ 42%]
+tests/test_routes.py::TestAccountRoutes::test_health PASSED              [ 57%]
+tests/test_routes.py::TestAccountRoutes::test_list_accounts PASSED       [ 71%]
+tests/test_routes.py::TestAccountRoutes::test_read_account PASSED        [ 85%]
 tests/test_routes.py::TestAccountRoutes::test_update_account PASSED      [100%]
 
-============================== 6 passed in 0.22s ===============================
+============================== 7 passed in 0.16s ===============================
