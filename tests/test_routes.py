@@ -55,3 +55,11 @@ class TestAccountRoutes(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_cors_headers(self):
+        response = self.client.get(
+            '/health',
+            headers={'Origin': 'http://example.com'}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('Access-Control-Allow-Origin', response.headers)
